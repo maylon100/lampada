@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lâmpada</title>
+<style>
+  .lampada {
+    width: 100px;
+    height: 100px;
+    background-color: #f2f2f2;
+    border: 2px solid #333;
+    border-radius: 50%;
+    margin: 20px;
+  }
+  .ligada {
+    background-color: yellow;
+    box-shadow: 0 0 20px yellow;
+  }
+  .desligada {
+    background-color: #f2f2f2;
+    box-shadow: none;
+  }
+</style>
+</head>
+<body>
+  <div class="lampada desligada" id="lampada"></div>
+  <button onclick="ligarDesligar()">Ligar/Desligar</button>
+
+  <script>
+    function ligarDesligar() {
+      var lampada = document.getElementById('lampada');
+      // Alternar classes para ligar/desligar
+      lampada.classList.toggle('ligada');
+      lampada.classList.toggle('desligada');
+    }
+  </script>
+</body>
+</html>
